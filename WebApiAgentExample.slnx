@@ -1,7 +1,4 @@
 <Solution>
-  <Project Path="AspireApp1/AspireApp1.ApiService/AspireApp1.ApiService.csproj" />
-  <Project Path="AspireApp1/AspireApp1.AppHost/AspireApp1.AppHost.csproj" Id="a110467a-b1f1-4e49-9f12-9769db3c7001" />
-  <Project Path="AspireApp1/AspireApp1.ServiceDefaults/AspireApp1.ServiceDefaults.csproj" />
-  <Project Path="AspireApp1/AspireApp1.Tests/AspireApp1.Tests.csproj" />
-  <Project Path="AspireApp1/AspireApp1.Web/AspireApp1.Web.csproj" />
+  <Project Path="AspireApp.AppHost/AspireApp.AppHost.csproj" Id="26c78ab8-0b94-4156-8076-00b141176983" />
+  <Project Path="AspireApp.ServiceDefaults/AspireApp.ServiceDefaults.csproj" />
 </Solution>
