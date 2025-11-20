@@ -1,12 +1,10 @@
+using Aspire.Hosting.GitHub;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
-var apiService = builder.AddProject<Projects.AspireApp_ApiService>("apiservice")
-    .WithHttpHealthCheck("/health");
+var llm = builder.AddGitHubModel("agent-chat", GitHubModel.OpenAI.OpenAIGpt4oMini);
 
-builder.AddProject<Projects.AspireApp_Web>("webfrontend")
-    .WithExternalHttpEndpoints()
-    .WithHttpHealthCheck("/health")
-    .WithReference(apiService)
-    .WaitFor(apiService);
+builder.AddProject<Projects.MyWebApiAgent>("web-agent")
+    .WithReference(llm);
 
 builder.Build().Run();

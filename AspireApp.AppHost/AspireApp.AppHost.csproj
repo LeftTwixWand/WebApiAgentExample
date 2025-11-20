@@ -8,4 +8,12 @@
     <UserSecretsId>017355d3-e737-453b-b272-eb7466c2a6e4</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.GitHub.Models" Version="13.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyWebApiAgent\MyWebApiAgent.csproj" />
+  </ItemGroup>
+
 </Project>

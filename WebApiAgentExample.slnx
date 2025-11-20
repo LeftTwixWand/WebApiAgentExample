@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="AspireApp.AppHost/AspireApp.AppHost.csproj" Id="26c78ab8-0b94-4156-8076-00b141176983" />
   <Project Path="AspireApp.ServiceDefaults/AspireApp.ServiceDefaults.csproj" />
+  <Project Path="MyWebApiAgent/MyWebApiAgent.csproj" />
 </Solution>
