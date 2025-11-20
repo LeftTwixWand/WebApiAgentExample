@@ -1,6 +1,4 @@
-# AI Agent Web API
-
-This is an AI Agent Web API application created from the `aiagent-webapi` template. This template is currently in a preview stage. If you have feedback, please take a [brief survey](https://aka.ms/dotnet/aiagent-webapi/preview1/survey).
+s# AI Agent Web API
 
 ## Prerequisites
 
@@ -14,11 +12,9 @@ This is an AI Agent Web API application created from the `aiagent-webapi` templa
 
 This application uses GitHub Models (model: gpt-4o-mini) for AI functionality. You'll need to configure your GitHub Models API token:
 
-**Option A: Using User Secrets (Recommended for Development)**
-
-```bash
-dotnet user-secrets set "GITHUB_TOKEN" "your-github-models-token-here"
-```
+**Option A: Using aspire managed secrets (Recommended for Development)**
+<img width="1551" height="555" alt="image" src="https://github.com/user-attachments/assets/efa2acdf-80b2-436b-a353-f9aa294e6577" />
+<img width="907" height="520" alt="image" src="https://github.com/user-attachments/assets/7aa00f37-5c40-4d51-a1bc-59559c9d1d65" />
 
 **Option B: Using Environment Variables**
 
@@ -46,7 +42,7 @@ Set the `GITHUB_TOKEN` environment variable:
 ### 2. Run the Application
 
 ```bash
-dotnet run -lp https
+aspire run
 ```
 
 The application will start and listen on:
