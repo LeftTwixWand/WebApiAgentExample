@@ -1,7 +1,5 @@
 # AI Agent Web API
 
-This is an AI Agent Web API application created from the `aiagent-webapi` template. This template is currently in a preview stage. If you have feedback, please take a [brief survey](https://aka.ms/dotnet/aiagent-webapi/preview1/survey).
-
 ## Prerequisites
 
 - A GitHub Models API token (free to get started)
@@ -14,11 +12,9 @@ This is an AI Agent Web API application created from the `aiagent-webapi` templa
 
 This application uses GitHub Models (model: gpt-4o-mini) for AI functionality. You'll need to configure your GitHub Models API token:
 
-**Option A: Using User Secrets (Recommended for Development)**
-
-```bash
-dotnet user-secrets set "GITHUB_TOKEN" "your-github-models-token-here"
-```
+**Option A: Using aspire managed secrets (Recommended for Development)**
+<img width="1551" height="555" alt="image" src="https://github.com/user-attachments/assets/efa2acdf-80b2-436b-a353-f9aa294e6577" />
+<img width="907" height="520" alt="image" src="https://github.com/user-attachments/assets/7aa00f37-5c40-4d51-a1bc-59559c9d1d65" />
 
 **Option B: Using Environment Variables**
 
@@ -46,84 +42,5 @@ Set the `GITHUB_TOKEN` environment variable:
 ### 2. Run the Application
 
 ```bash
-dotnet run -lp https
+aspire run
 ```
-
-The application will start and listen on:
-- HTTP: `http://localhost:5251`
-- HTTPS: `https://localhost:7204`
-
-### 3. Test the Application
-
-The application exposes OpenAI-compatible API endpoints. You can interact with the AI agents using any OpenAI-compatible client or tools.
-
-In development environments, a `/devui/` route is mapped to the Agent Framework development UI (DevUI), and when the app is launched through an IDE a browser will open to this URL. DevUI provides a web-based UI for interacting with agents and workflows. DevUI operates as an OpenAI-compatible client using the Responses and Conversations endpoints.
-
-## How It Works
-
-This application demonstrates Agent Framework with:
-
-1. **Writer Agent**: Writes short stories (300 words or less) about specified topics
-2. **Editor Agent**: Edits stories to improve grammar and style, ensuring they stay under 300 words
-3. **Publisher Workflow Agent**: A sequential workflow agent that combines the writer and editor agents
-
-The agents are exposed through OpenAI-compatible API endpoints, making them easy to integrate with existing tools and applications.
-
-## Template Parameters
-
-When creating a new project, you can customize it using template parameters:
-
-```bash
-# Specify AI service provider
-dotnet new aiagent-webapi --provider azureopenai
-
-# Specify a custom chat model
-dotnet new aiagent-webapi --chat-model gpt-4o
-
-# Use API key authentication for Azure OpenAI
-dotnet new aiagent-webapi --provider azureopenai --managed-identity false
-
-# Use Ollama with a different model
-dotnet new aiagent-webapi --provider ollama --chat-model llama3.1
-```
-
-### Available Parameters
-
-- **`--provider`**: Choose the AI service provider
-  - `githubmodels` (default) - GitHub Models
-  - `azureopenai` - Azure OpenAI
-  - `openai` - OpenAI Platform
-  - `ollama` - Ollama (local development)
-
-- **`--chat-model`**: Specify the chat model/deployment name
-  - Default for OpenAI/Azure OpenAI/GitHub Models: `gpt-4o-mini`
-  - Default for Ollama: `llama3.2`
-
-- **`--managed-identity`**: Use managed identity for Azure services (default: `true`)
-  - Only applicable when `--provider azureopenai`
-
-- **`--framework`**: Target framework (default: `net10.0`)
-  - Options: `net10.0`, `net9.0`, `net8.0`
-
-## Project Structure
-
-- `Program.cs` - Application entry point and configuration
-- `appsettings.json` - Application configuration
-- `Properties/launchSettings.json` - Launch profiles for development
-
-## Learn More
-
-- [AI apps for .NET developers](https://learn.microsoft.com/dotnet/ai)
-- [Microsoft Agent Framework Documentation](https://aka.ms/dotnet/agent-framework/docs)
-- [GitHub Models](https://github.com/marketplace/models)
-
-## Troubleshooting
-
-**Problem**: Application fails with "Missing configuration: GITHUB_TOKEN"
-
-**Solution**: Make sure you've configured your GitHub Models API token using one of the methods described above.
-
-**Problem**: API requests fail with authentication errors
-
-**Solution**: Verify your GitHub Models token is valid and hasn't expired. You may need to regenerate it from the GitHub Models website.
-
