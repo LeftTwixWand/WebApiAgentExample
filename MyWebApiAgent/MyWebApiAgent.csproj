@@ -9,12 +9,12 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Azure.AI.Inference" Version="13.0.0-preview.1.25560.3" />
-    <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-preview.251110.2" />
-    <PackageReference Include="Microsoft.Agents.AI.DevUI" Version="1.0.0-preview.251110.2" />
-    <PackageReference Include="Microsoft.Agents.AI.Hosting" Version="1.0.0-preview.251110.2" />
-    <PackageReference Include="Microsoft.Agents.AI.Hosting.OpenAI" Version="1.0.0-alpha.251110.2" />
-    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-preview.251110.2" />
-    <PackageReference Include="Microsoft.Agents.AI.Workflows" Version="1.0.0-preview.251110.2" />
+    <PackageReference Include="Microsoft.Agents.AI" Version="1.0.0-preview.251114.1" />
+    <PackageReference Include="Microsoft.Agents.AI.DevUI" Version="1.0.0-preview.251114.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Hosting" Version="1.0.0-preview.251114.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Hosting.OpenAI" Version="1.0.0-alpha.251114.1" />
+    <PackageReference Include="Microsoft.Agents.AI.OpenAI" Version="1.0.0-preview.251114.1" />
+    <PackageReference Include="Microsoft.Agents.AI.Workflows" Version="1.0.0-preview.251114.1" />
   </ItemGroup>
 
   <ItemGroup>
